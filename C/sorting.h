@@ -8,7 +8,7 @@
 
 typedef int (*Comparador)(const void* a, const void* b);
 
-void selection_sort(void*, int, int, Comparador);
-void insertion_sort(void*, int, int, Comparador);
+void selection_sort(void*, int, size_t, Comparador);
+void insertion_sort(void*, int, size_t, Comparador);
 
 #endif
