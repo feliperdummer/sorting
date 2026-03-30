@@ -2,8 +2,8 @@
 
 int main(void) {return 0;}
 
-void selection_sort(void* arr, int arr_len, int arr_size, Comparador cmp) {
-    void* temp = malloc(sizeof(arr_size));
+void selection_sort(void* arr, int arr_len, size_t arr_size, Comparador cmp) {
+    void* temp = malloc(arr_size);
     for (int i = 0; i < arr_len-1; i++) {
         int min_index = i;
         for (int j = i+1; j < arr_len; j++) {
@@ -18,7 +18,7 @@ void selection_sort(void* arr, int arr_len, int arr_size, Comparador cmp) {
     free(temp);
 }
 
-void insertion_sort(void* arr, int arr_len, int arr_size, Comparador cmp) {
+void insertion_sort(void* arr, int arr_len, size_t arr_size, Comparador cmp) {
     for (int i = 1; i < arr_len; i++) {
         void* key = malloc(arr_size);
         memcpy(key, (char*)(arr+(i*arr_size)), arr_size);
