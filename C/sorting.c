@@ -127,10 +127,12 @@ void merge(void* left, void* right, void* arr, int arr_len, size_t arr_size, Com
     // quando sobrar elemento em pelo menos um dos lados
     while (l < left_len) {
         memcpy((char*)arr+i*arr_size, (char*)left+l*arr_size, arr_size);
+        i++;
         l++;
     }
     while (r < right_len) {
         memcpy((char*)arr+i*arr_size, (char*)right+r*arr_size, arr_size);
+        i++;
         r++;
     }
 }
